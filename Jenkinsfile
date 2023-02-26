@@ -9,16 +9,16 @@ pipeline {
          
         stage('Build and Test') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         
         stage('Deploy to Tomcat') {
             steps {
-                sh '/opt/tomcat/bin/shutdown.sh'
-                sh 'rm -rf /opt/tomcat/webapps/devops*'
-                sh 'cp target/devops.war /opt/tomcat/webapps/'
-                sh '/opt/tomcat/bin/startup.sh'
+                bat '/opt/tomcat/bin/shutdown.sh'
+                bat 'rm -rf /opt/tomcat/webapps/devops*'
+                bat 'cp target/devops.war /opt/tomcat/webapps/'
+                bat '/opt/tomcat/bin/startup.sh'
             }
  }
 }
