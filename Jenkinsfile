@@ -15,10 +15,10 @@ pipeline {
         
         stage('Deploy to Tomcat') {
             steps {
-                bat '/opt/tomcat/bin/shutdown.sh'
-                bat 'rm -rf /opt/tomcat/webapps/devops*'
-                bat 'cp target/devops.war /opt/tomcat/webapps/'
-                bat '/opt/tomcat/bin/startup.sh'
+                bat 'C:/Program Files/Apache Software Foundation/Tomcat 10.1/bin/shutdown.bat'
+                bat 'rm -rf /opt/tomcat/webapps/devops2'
+                bat 'cp target/devops2.war /opt/tomcat/webapps/'
+                bat 'C:/Program Files/Apache Software Foundation/Tomcat 10.1/bin/startup.bat'
             }
  }
 }
