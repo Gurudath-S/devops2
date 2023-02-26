@@ -6,4 +6,6 @@ public class TestEntity {
 
     private int age;
 
+    private String gender;
+
 }
